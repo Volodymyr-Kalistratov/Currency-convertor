@@ -1,16 +1,35 @@
-let form = document.querySelector('.form');
-let cost = document.querySelector('.js-cost');
-let rate = document.querySelector('.js-rate');
-let submit = document.querySelector('.js-submit');
-let resultSpan = document.querySelector('.js-span');
+let formElement = document.querySelector(".js-form")
+let currencyElement = document.querySelector(".js-currency")
+let amountElement = document.querySelector(".js-amount")
+let resultElement = document.querySelector(".js-result")
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+let currencyEuro = 4.68;
+let currencyDolar = 4.33;
+let currencyPound = 5.32;
+let currencyFrank = 4.72;
 
-  let value = cost.value;
-  let amount = rate.value;
+formElement.addEventListener("submit", (event) => {
+	event.preventDefault();
 
-  let result = value * amount;
+	let currency = currencyElement.value
+	let amount = amountElement.value
+	let result = resultElement.value
 
-  resultSpan.innerText = result.toFixed(2);
+	switch (currency) {
+		case "euro":
+			result = amount / currencyEuro;
+			break;
+		case "dolar":
+			result = amount / currencyDolar;
+			break;
+		case "pound":
+			result = amount / currencyPound;
+			break;
+		case "frank":
+			result = amount / currencyFrank;
+	}
+  
+	resultElement.innerText = result.toFixed(2);
+
 });
+

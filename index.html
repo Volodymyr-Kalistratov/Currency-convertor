@@ -13,27 +13,35 @@
 </head>
 
 <body class="body">
-    <form class="form">
+    <form class="form js-form">
         <fieldset class="form__fieldset">
-            <legend class="form__legend">Kalkulator walut</legend>
+            <legend class="form__legend">Kantorek Kalkulatorek</legend>
             <p>
-                <label class="form__label" for="cost">Wpisz kwotę w Euro:</label>
-
-                <input class="form__input js-cost" type="number" name="cost" min="0.1" required step="0.01" />
+                <label>
+                    <span class="form__labelText">Kwota w PLN*</span><input class="form__field js-amount" type="number"
+                        name="valueNumber" min="0.1" required>
+                </label>
             </p>
             <p>
-                <label class="form__label" for="rate">Wpisz aktualny kurs Euro:</label>
-
-                <input class="form__input js-rate" type="number" name="rate" min="0.1" required step="0.01" />
+                <label>
+                    <span class="form__labelText">Wybierz walutę</span>
+                    <select class="form__field js-currency" name="currency">
+                        <option value="euro">Euro</option>
+                        <option value="dolar">Dolar amerykański</option>
+                        <option value="pound">Funt brytyjski</option>
+                        <option value="frank">Frank szwajcarski</option>
+                    </select>
+                </label>
             </p>
-            <input class="form__button js-submit" type="submit" value="Przelicz!" />
-            <input class="form__button" type="reset" value="Wyczyść!" />
+            <p class="form__result">
+                Kwota po przeliczeniu: <span class="js-result"></span>
+            </p>
+            <p>
+                <button class="form__button">Oblicz</button>
+            </p>
         </fieldset>
     </form>
-
-    <p class="result">
-        Kwota po przeliczeniu: <span class="result__span js-span"></span> PLN
-    </p>
 </body>
+
 
 </html>
