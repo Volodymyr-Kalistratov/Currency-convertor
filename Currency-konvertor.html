@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kalkulator-walut</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/homework4.css">
+    <script defer src="/js/homework4.js"></script>
+</head>
+
+<body class="body">
+    <form class="form">
+        <fieldset class="form__fieldset">
+            <legend class="form__legend">Kalkulator walut</legend>
+            <p>
+                <label class="form__label" for="cost">Wpisz kwotę w Euro:</label>
+
+                <input class="form__input js-cost" type="number" name="cost" min="0.1" required step="0.01" />
+            </p>
+            <p>
+                <label class="form__label" for="rate">Wpisz aktualny kurs Euro:</label>
+
+                <input class="form__input js-rate" type="number" name="rate" min="0.1" required step="0.01" />
+            </p>
+            <input class="form__button js-submit" type="submit" value="Przelicz!" />
+            <input class="form__button" type="reset" value="Wyczyść!" />
+        </fieldset>
+    </form>
+
+    <p class="result">
+        Kwota po przeliczeniu: <span class="result__span js-span"></span> PLN
+    </p>
+</body>
+
+</html>
