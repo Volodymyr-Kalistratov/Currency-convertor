@@ -15,6 +15,10 @@ html {
   line-height: 3.5;
   font-size: 18px;
   overflow: auto;
+  background-image: url(https://images6.alphacoders.com/421/thumb-1920-421133.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .form {
@@ -49,6 +53,7 @@ html {
   padding: 10px;
   background-color: hsl(0, 0%, 100%);
   font-weight: 600;
+  padding: 5px 35px 5px 35px;
 }
 .form__button:hover{
   background-color: hsl(0, 0%, 90%);
