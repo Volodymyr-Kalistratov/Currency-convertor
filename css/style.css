@@ -32,8 +32,10 @@ html {
 .form__legend {
   border: 2px solid black;
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 50px;
   background-color: gold;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .form__fieldset {
